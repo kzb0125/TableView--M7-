@@ -13,6 +13,8 @@
 		24CDAA402B8A4D9000CFFDBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA3E2B8A4D9000CFFDBE /* Main.storyboard */; };
 		24CDAA422B8A4D9100CFFDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA412B8A4D9100CFFDBE /* Assets.xcassets */; };
 		24CDAA452B8A4D9100CFFDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA432B8A4D9100CFFDBE /* LaunchScreen.storyboard */; };
+		24CDAA512B8A65D300CFFDBE /* NBAteam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA502B8A65D300CFFDBE /* NBAteam.swift */; };
+		24CDAA532B8A753D00CFFDBE /* TeamRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		24CDAA412B8A4D9100CFFDBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24CDAA442B8A4D9100CFFDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24CDAA462B8A4D9100CFFDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24CDAA502B8A65D300CFFDBE /* NBAteam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAteam.swift; sourceTree = "<group>"; };
+		24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRoster.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,31 @@
 			children = (
 				24CDAA382B8A4D9000CFFDBE /* AppDelegate.swift */,
 				24CDAA3A2B8A4D9000CFFDBE /* SceneDelegate.swift */,
-				24CDAA3C2B8A4D9000CFFDBE /* ViewController.swift */,
+				24CDAA4F2B8A65A800CFFDBE /* Model */,
+				24CDAA4C2B8A658300CFFDBE /* View */,
 				24CDAA3E2B8A4D9000CFFDBE /* Main.storyboard */,
 				24CDAA412B8A4D9100CFFDBE /* Assets.xcassets */,
 				24CDAA432B8A4D9100CFFDBE /* LaunchScreen.storyboard */,
 				24CDAA462B8A4D9100CFFDBE /* Info.plist */,
 			);
 			path = "TableView--M7-";
+			sourceTree = "<group>";
+		};
+		24CDAA4C2B8A658300CFFDBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24CDAA3C2B8A4D9000CFFDBE /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24CDAA4F2B8A65A800CFFDBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				24CDAA502B8A65D300CFFDBE /* NBAteam.swift */,
+				24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CDAA512B8A65D300CFFDBE /* NBAteam.swift in Sources */,
 				24CDAA3D2B8A4D9000CFFDBE /* ViewController.swift in Sources */,
+				24CDAA532B8A753D00CFFDBE /* TeamRoster.swift in Sources */,
 				24CDAA392B8A4D9000CFFDBE /* AppDelegate.swift in Sources */,
 				24CDAA3B2B8A4D9000CFFDBE /* SceneDelegate.swift in Sources */,
 			);
