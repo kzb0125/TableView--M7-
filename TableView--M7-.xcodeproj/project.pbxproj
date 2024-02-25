@@ -14,7 +14,9 @@
 		24CDAA422B8A4D9100CFFDBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA412B8A4D9100CFFDBE /* Assets.xcassets */; };
 		24CDAA452B8A4D9100CFFDBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA432B8A4D9100CFFDBE /* LaunchScreen.storyboard */; };
 		24CDAA512B8A65D300CFFDBE /* NBAteam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA502B8A65D300CFFDBE /* NBAteam.swift */; };
-		24CDAA532B8A753D00CFFDBE /* TeamRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */; };
+		24CDAA532B8A753D00CFFDBE /* NBARoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA522B8A753D00CFFDBE /* NBARoster.swift */; };
+		24CDAA592B8A785300CFFDBE /* TeamRosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CDAA582B8A785300CFFDBE /* TeamRosterView.swift */; };
+		24CDAA5B2B8B3ABE00CFFDBE /* NBA_team_roster.csv in Resources */ = {isa = PBXBuildFile; fileRef = 24CDAA5A2B8B3ABE00CFFDBE /* NBA_team_roster.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		24CDAA442B8A4D9100CFFDBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24CDAA462B8A4D9100CFFDBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24CDAA502B8A65D300CFFDBE /* NBAteam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAteam.swift; sourceTree = "<group>"; };
-		24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRoster.swift; sourceTree = "<group>"; };
+		24CDAA522B8A753D00CFFDBE /* NBARoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBARoster.swift; sourceTree = "<group>"; };
+		24CDAA582B8A785300CFFDBE /* TeamRosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRosterView.swift; sourceTree = "<group>"; };
+		24CDAA5A2B8B3ABE00CFFDBE /* NBA_team_roster.csv */ = {isa = PBXFileReference; lastKnownFileType = text; name = NBA_team_roster.csv; path = "TableView--M7-/NBA_team_roster.csv"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				24CDAA4C2B8A658300CFFDBE /* View */,
 				24CDAA3E2B8A4D9000CFFDBE /* Main.storyboard */,
 				24CDAA412B8A4D9100CFFDBE /* Assets.xcassets */,
+				24CDAA5A2B8B3ABE00CFFDBE /* NBA_team_roster.csv */,
 				24CDAA432B8A4D9100CFFDBE /* LaunchScreen.storyboard */,
 				24CDAA462B8A4D9100CFFDBE /* Info.plist */,
 			);
@@ -76,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				24CDAA3C2B8A4D9000CFFDBE /* ViewController.swift */,
+				24CDAA582B8A785300CFFDBE /* TeamRosterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -84,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				24CDAA502B8A65D300CFFDBE /* NBAteam.swift */,
-				24CDAA522B8A753D00CFFDBE /* TeamRoster.swift */,
+				24CDAA522B8A753D00CFFDBE /* NBARoster.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 			files = (
 				24CDAA452B8A4D9100CFFDBE /* LaunchScreen.storyboard in Resources */,
 				24CDAA422B8A4D9100CFFDBE /* Assets.xcassets in Resources */,
+				24CDAA5B2B8B3ABE00CFFDBE /* NBA_team_roster.csv in Resources */,
 				24CDAA402B8A4D9000CFFDBE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,7 +169,8 @@
 			files = (
 				24CDAA512B8A65D300CFFDBE /* NBAteam.swift in Sources */,
 				24CDAA3D2B8A4D9000CFFDBE /* ViewController.swift in Sources */,
-				24CDAA532B8A753D00CFFDBE /* TeamRoster.swift in Sources */,
+				24CDAA592B8A785300CFFDBE /* TeamRosterView.swift in Sources */,
+				24CDAA532B8A753D00CFFDBE /* NBARoster.swift in Sources */,
 				24CDAA392B8A4D9000CFFDBE /* AppDelegate.swift in Sources */,
 				24CDAA3B2B8A4D9000CFFDBE /* SceneDelegate.swift in Sources */,
 			);

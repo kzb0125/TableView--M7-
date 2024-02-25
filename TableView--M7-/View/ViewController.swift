@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var selectedTeam: String?
     
     var NBAteams = [
             NBAteam("Atlanta", "Hawks"),
@@ -62,6 +63,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view.
     }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedTeam = NBAteams[indexPath.row].teamName
+        self .performSegue(withIdentifier: "toTeamRoster", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTeamRoster" {
+            let teamRoster = segue.destination as! TeamRosterView
+            teamRoster.teamName = selectedTeam
+        }
+    }
 }
 
