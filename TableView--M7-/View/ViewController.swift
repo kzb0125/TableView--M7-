@@ -49,13 +49,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell", for: indexPath)
+        
+        // cell content config
         var content = cell.defaultContentConfiguration()
         content.text = NBAteams[indexPath.row].teamCity
         content.secondaryText = NBAteams[indexPath.row].teamName
+        content.textProperties.font = .systemFont(ofSize: CGFloat(14))
+        content.textProperties.color = .white
+        content.secondaryTextProperties.font = .systemFont(ofSize: CGFloat(20))
+        content.secondaryTextProperties.color = .white
         cell.contentConfiguration = content
+        
+        // cell background config
+        var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
+        backgroundConfig.backgroundColor = .black
+        cell.backgroundConfiguration = backgroundConfig
+        
         return cell
+    
     }
+
     
 
     override func viewDidLoad() {
@@ -71,7 +85,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toTeamRoster" {
             let teamRoster = segue.destination as! TeamRosterView
-            teamRoster.teamName = selectedTeam
+            teamRoster.selectedTeamName = selectedTeam
         }
     }
 }

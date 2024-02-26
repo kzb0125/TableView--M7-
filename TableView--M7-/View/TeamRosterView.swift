@@ -8,25 +8,46 @@
 import UIKit
 import UniformTypeIdentifiers
 
-class TeamRosterView: UIViewController {
+class TeamRosterView: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var teamName: String?
+    @IBOutlet weak var labelTeam: UILabel!
+    
+    let teams = NBARoster()
+    var index: Int?
+    var selectedTeamName: String?
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return teams.roster[index!].players.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = teams.roster[index!].players[indexPath.row]
+        content.textProperties.alignment = .center
+        content.textProperties.color = .white
+        cell.contentConfiguration = content
+        return cell
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        var team = NBARoster()
-        print(team.roster)
+
+        for i in teams.roster.indices{
+            if (teams.roster[i].teamName == selectedTeamName) {
+                index = i
+                break
+            }
+        }
+        
+        labelTeam.text = selectedTeamName
+        
+    }
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
